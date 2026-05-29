@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-pulse-50 via-white to-heal-50 text-slate-800 min-h-screen;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-100/80 p-5 transition-shadow hover:shadow-md;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2.5 rounded-xl bg-pulse-600 text-white font-medium hover:bg-pulse-700 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2.5 rounded-xl bg-white border border-pulse-200 text-pulse-700 font-medium hover:bg-pulse-50 active:scale-[0.98] transition-all;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-pulse-400 focus:border-transparent transition-shadow;
+  }
+
+  .page-container {
+    @apply max-w-4xl mx-auto px-4 pb-28 pt-4 animate-fade-in;
+  }
+
+  .strike-taken {
+    @apply opacity-60 line-through decoration-heal-500 decoration-2;
+  }
+}
